@@ -10,7 +10,9 @@ In addition to the most basic and fundamental parameters for this method (mean a
 2) Kurtosis
 3) Correlations
 
-It also gives the option for all parameters to change over time, linearly from A to B or however else this is to be defined. Though this naturally slows down the simulation process in simple cases, say if mean returns or return correlations remain constant, this is intended to be a generic implementation that gives the user significant optionality.
+It also gives the option for all parameters to change over time, linearly from A to B or however else this is to be defined. This allows for the very useful assessment of nuanced market views, (e.g. that a stock's returns variance will increase over the next year, or that two stocks' returns correlation will decrease).
+
+Though this naturally slows down the simulation process in simple cases, say if mean returns or return correlations remain constant, this is intended to be a generic implementation that gives the user significant optionality.
 
 Where performance time is critical, an implemenation tailored specifically for the task at hand with the precise amount of complexity necessary could be written. Moreover, a low-level language much better suited for such a task, such as C++, would likely be in order.
 
