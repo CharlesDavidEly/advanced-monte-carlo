@@ -8,7 +8,7 @@ In addition to the most basic and fundamental parameters for this method (mean a
 
 1) Skew
 2) Kurtosis
-3) Correlations
+3) Correlation
 
 It also gives the option for all parameters to change over time, linearly from A to B or however else this is to be defined. This allows for the very useful assessment of nuanced market views, (e.g. that a stock's returns variance will increase over the next year, or that two stocks' returns correlation will decrease).
 
