@@ -6,8 +6,8 @@ This project is intended to showcase a basic Monte Carlo simulation implementati
 
 In addition to the most basic and fundamental features, this Monte Carlo simulation accounts for underlying:
 
-1.1) Skew
-1.2) Kurtosis
+1) Skew
+2) Kurtosis
 3) Correlations
 
 It also gives the option for changing 
