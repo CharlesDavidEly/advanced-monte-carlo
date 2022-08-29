@@ -1,6 +1,6 @@
 # Monte Carlo Basic
 
-This project is intended to showcase a basic Monte Carlo simulation implementation in Python. It enables one to simulate underlying price movements for multiple stocks, having a few basic additions beyond a plain vanilla implementation that allow for more realistic and useful results. It is based upon this paper (https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2665147), using the methods described therein and extrapolating minor additional optionality on top of that.
+This project is intended to showcase a basic Monte Carlo simulation implementation in VBA. It enables one to simulate underlying price movements for multiple stocks, having a few basic additions beyond a plain vanilla implementation that allow for more realistic and useful results. It is based upon this paper (https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2665147), using the methods described therein and extrapolating minor additional optionality on top of that.
 
 ![Screenshot](MonteCarloEqn.jpg)
 ![alt text](https://github.com/CharlesDavidEly/monte-carlo-basic/blob/main/MonteCarloEqn.jpg?raw=true)
