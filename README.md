@@ -5,7 +5,6 @@ This project is intended to showcase a basic Monte Carlo simulation implementati
 ![Screenshot](MonteCarloEqn.jpg)
 ![alt text](https://github.com/CharlesDavidEly/monte-carlo-basic/blob/main/MonteCarloEqn.jpg?raw=true)
 
-
 # Parameters
 
 In addition to the most basic and fundamental parameters for this method (mean and variance), this Monte Carlo simulation implementation allows for the following inputs:
