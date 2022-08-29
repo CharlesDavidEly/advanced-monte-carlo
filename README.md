@@ -23,3 +23,9 @@ Where performance time is critical, an implementation tailored specifically for 
 # Simulation Units
 
 This simulates underlying price movements in days, rather than in time periods shorter or longer than a day.
+
+# Limitations
+
+As the word "basic" in the name implies, this Monte Carlo specification does not account for everything. Specifically, it does not capture the empirical reality of volatility clustering, as could be done using a GARCH model. Moreover, it does not accurately capture the differentiated behavior between open market and after hours periods, as would a jump diffusion model.
+
+The primary impact of these limitations 
