@@ -26,7 +26,7 @@ Specifically, there is at each step of the simulation with respect to the random
 
 # Parameters
 
-## Underlying
+## Underlying Parameters
 
 In addition to the most basic and fundamental parameters for this method (mean and variance), this Monte Carlo simulation implementation allows for the following inputs:
 
