@@ -8,11 +8,11 @@ The above formula is the core of the stock price Monte Carlo simulation concept,
 
 An underlying's drift is simply a product of its μ (average simple return) and σ (simple return standard deviation) as calculated over some specified ex-post sample period. Notably, the core of the drift term (that is, the part in the parentheses that's ultimately scaled by Δt) is also equivalent to the same ex-post sample's log return, so it could just be defined as that directly without any need for μ or σ. Alternatively, μ and σ (or an expected average log return as previously explained) could be specified explictly to plug a particular ex-ante market view into the model.
 
-Beyond this core formula, there is at each step of the simulation:
+Beyond this core formula, there is at each step of the simulation with respect to the random term, ε:
 
-1) Applying skew and kurtosis (ex-post sample or ex-ante desired) to each stock's simulated log return
-2) Determining necessary correlations by taking desired correlations (ex-post sample or ex-ante desired) and accounting for interactive effects (they must be made stronger due to the ske
-3) Applying correlations to the log returns resulting from 1)
+1) The application of skew and kurtosis (ex-post sample or ex-ante desired) to each stock's simulated log return
+2) The determination of necessary correlations by taking desired correlations (ex-post sample or ex-ante desired) and accounting for interactive effects (they must be made stronger due to the correlation muting effect caused by applying skew and kurtosis in step 1))
+3) The application of necessary correlations to the log returns resulting from step 1)
 
 # Underlying Parameters
 
@@ -33,8 +33,8 @@ Where performance time is critical, an implementation tailored specifically for 
 In addition to those parameters associated with the underlyings, there are the following inputs at the simulation level:
 
 1) Simulation number
-2) Simulation unit size = Δt (in trading days; e.g., days (1), weeks (5 trading days), months (21 trading days), etc.)
-3) Simulation units (e.g., 252 if your simulation unit size is days (1) and you want to simulate prices over the course of a year)
+2) Time unit size = Δt (in trading days; e.g., days (1), weeks (5 trading days), months (21 trading days), etc.)
+3) Time units (e.g., 252 if your simulation unit size is days (1) and you want to simulate prices over the course of a year)
 
 Fasdfadsfasdf
 
