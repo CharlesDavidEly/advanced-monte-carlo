@@ -20,9 +20,9 @@ Importantly, this random term *ε* is ultimately the center of all attention. It
 
 Specifically, there is at each step of the simulation with respect to the random term, *ε*:
 
-1. The application of skew and kurtosis (ex-post sample or ex-ante desired) to each stock's simulated *ε* (achieving _ε'_s)
+1. The application of skew and kurtosis (ex-post sample or ex-ante desired) to each stock's simulated *ε* (achieving an *ε'* set)
 2. The determination of necessary correlations by taking desired correlations (ex-post sample or ex-ante desired) and accounting for interactive effects (they must be made stronger to offset the correlation muting effect caused by applying skew and kurtosis in step 1)
-3. The application of necessary correlations to the _ε'_s resulting from step 1 (achieving our final desired _ε''_s)
+3. The application of necessary correlations to the *ε'* set resulting from step 1 (achieving our final desired *ε''* set)
 
 # Parameters
 
