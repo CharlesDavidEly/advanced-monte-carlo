@@ -4,7 +4,7 @@ This project is intended to showcase a basic Monte Carlo simulation implementati
 
 ![Screenshot](MonteCarloEqn.jpg)
 
-The above formula is the core of the stock price Monte Carlo simulation concept, modeling geometric Brownian under the risk-neutral measure. A simulated stock price can be conceptualized as the previous day's stock price multiplied by *e* to the sum of 1) some drift (scaled by time step *Δt*), and 2) a random walk (scaled by *√(Δt)*).
+The above formula is the core of the stock price Monte Carlo simulation concept, modeling geometric Brownian motion under the risk-neutral measure. A simulated stock price can be conceptualized as the previous day's stock price multiplied by *e* to the sum of 1) some drift (scaled by time step *Δt*), and 2) a random walk (scaled by *√(Δt)*).
 
 ## Drift
 
