@@ -35,7 +35,7 @@ In addition to the most basic and fundamental parameters for this method (mean a
 3. Correlation
 4. Nonstationarity (change in all other underlying parameters over time)
 
-Nonstationarity can implemented as, say, a linear change in a value from A to B over the simulation period (the ex post parameter value should approach (A+B)/2). It can also be implemented in a more complex manner as desired, though expected values.
+Nonstationarity can implemented as, say, a linear change in a value from A to B over the simulation period (the ex post parameter value should approach (A+B)/2). It can also be implemented in more complex manners as desired, though expected ex post parameter values for such implementations may prove much harder to determine.
 
 This allows for the very useful assessment of nuanced market views, (e.g. that a stock's returns variance will increase over the next year, or that two stocks' returns correlation will decrease).
 
