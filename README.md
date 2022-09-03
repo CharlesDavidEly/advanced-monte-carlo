@@ -6,7 +6,7 @@ This project is intended to showcase a basic Monte Carlo simulation implementati
 
 The above formula is the core of the stock price Monte Carlo simulation concept, utilizing geometric Brownian under the risk-neutral measure. A simulated stock price can be conceptualized as the previous day's stock price multiplied by e to the sum of 1) some drift (scaled by Δt), and 2) a random walk (scaled by √(Δt)).
 
-An underlying's drift is simply a product of its μ (average simple return) and σ (simple return standard deviation) as calculated over some specified ex-post sample period. Notably, the core of the drift term (that is, the part in the parenthesis that's ultimately scaled by Δt) is also equivalent to the same ex-post sample's log return, so it could just simply be defined as that directly without any need for μ or σ. Alternatively, μ and σ (or drift directly as a log return) could be specified explictly to plug a particular ex-ante market view into the model.
+An underlying's drift is simply a product of its μ (average simple return) and σ (simple return standard deviation) as calculated over some specified ex-post sample period. Notably, the core of the drift term (that is, the part in the parentheses that's ultimately scaled by Δt) is also equivalent to the same ex-post sample's log return, so it could just simply be defined as that directly without any need for μ or σ. Alternatively, μ and σ (or drift directly as a log return) could be specified explictly to plug a particular ex-ante market view into the model.
 
 # Underlying Parameters
 
