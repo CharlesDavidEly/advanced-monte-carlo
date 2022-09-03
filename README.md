@@ -8,6 +8,12 @@ The above formula is the core of the stock price Monte Carlo simulation concept,
 
 An underlying's drift is simply a product of its μ (average simple return) and σ (simple return standard deviation) as calculated over some specified ex-post sample period. Notably, the core of the drift term (that is, the part in the parentheses that's ultimately scaled by Δt) is also equivalent to the same ex-post sample's log return, so it could just be defined as that directly without any need for μ or σ. Alternatively, μ and σ (or an expected average log return as previously explained) could be specified explictly to plug a particular ex-ante market view into the model.
 
+Beyond this core formula, there is at each step of the simulation:
+
+1) Applying skew and kurtosis (ex-post sample or ex-ante desired) to each stock's simulated log return
+2) Determining necessary correlations by taking desired correlations (ex-post sample or ex-ante desired) and accounting for interactive effects (they must be made stronger due to the ske
+3) Applying correlations to the log returns resulting from 1)
+
 # Underlying Parameters
 
 In addition to the most basic and fundamental parameters for this method (mean and variance), this Monte Carlo simulation implementation allows for the following inputs:
