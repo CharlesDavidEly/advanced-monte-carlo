@@ -4,9 +4,13 @@ This project is intended to showcase a basic Monte Carlo simulation implementati
 
 ![Screenshot](MonteCarloEqn.jpg)
 
-The above formula is the core of the stock price Monte Carlo simulation concept, utilizing geometric Brownian under the risk-neutral measure. A simulated stock price can be conceptualized as the previous day's stock price multiplied by e to the sum of 1) some drift (scaled by Δt), and 2) a random walk (scaled by √(Δt)).
+The above formula is the core of the stock price Monte Carlo simulation concept, modeling geometric Brownian under the risk-neutral measure. A simulated stock price can be conceptualized as the previous day's stock price multiplied by e to the sum of 1) some drift (scaled by Δt), and 2) a random walk (scaled by √(Δt)).
 
-An underlying's drift is simply a product of its μ (average simple return) and σ (simple return standard deviation) as calculated over some specified ex-post sample period. Notably, the core of the drift term (that is, the part in the parentheses that's ultimately scaled by Δt) is also equivalent to the same ex-post sample's log return, so it could just be defined as that directly without any need for μ or σ. Alternatively, μ and σ (or an expected average log return as previously explained) could be specified explictly to plug a particular ex-ante market view into the model.
+An underlying's drift is simply a product of its μ (average simple return) and σ (simple return standard deviation) as calculated over some specified ex-post sample period, interacting as depicted in the formula above and then being scaled by Δt. Notably, the core of the drift term (that is, the part in the parentheses that's ultimately scaled by Δt) is also equivalent to the same ex-post sample's log return, so it could just be defined as that directly without any need for μ or σ. Alternatively, μ and σ (or an expected average log return as previously explained) could be specified explictly to plug a particular ex-ante market view into the model.
+
+An underlying's random walk is simply ε (a random movement) scaled by both σ and √(Δt).
+
+Importantly, this random term ε is the center of all attention. It is this term, for each underlying at each simulation step, that must me manipulated in careful and clever ways to account for nonnormality and correlation.
 
 Beyond this core formula, there is at each step of the simulation with respect to the random term, ε:
 
