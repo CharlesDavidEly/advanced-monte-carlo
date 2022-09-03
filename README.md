@@ -14,7 +14,7 @@ An underlying's drift is simply a product of its *μ* (average simple return) an
 
 An underlying's random walk is simply *ε* (a random movement) scaled by both *σ* and *√(Δt)*.
 
-## Extras
+## Nonnormality and Correlation
 
 Importantly, this random term *ε* is ultimately the center of all attention. It is this term, for each underlying at each simulation step, that must be manipulated in careful and clever ways to account for nonnormality and correlation.
 
