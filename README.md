@@ -35,9 +35,9 @@ In addition to the most basic and fundamental parameters for this method (mean a
 3. Correlation
 4. Nonstationarity (change in all other underlying parameters over time)
 
-Nonstationarity can implemented as, say, a linear change in a value from A to B over the simulation period (the ex post parameter value should approach (A+B)/2). It can also be implemented in more complex manners as desired, though expected ex post parameter values for such implementations may prove much harder to determine.
+Nonstationarity can implemented as, say, a linear change in a parameter value from A to B over the simulation period (the ex post parameter value should approach (A+B)/2). It can also be implemented in more complex manners as desired, though expected ex post parameter values for such implementations may prove much harder to determine.
 
-This allows for the very useful assessment of nuanced market views, (e.g. that a stock's returns variance will increase over the next year, or that two stocks' returns correlation will decrease).
+This feature allows for the very useful assessment of nuanced market views, (e.g., that a stock's returns variance will increase over the next year, or that two stocks' returns correlation will decrease). Stress testing is also a potential application of this (e.g., our investment strategy heavily depends upon assets A and B performing in an uncorrelated manner, so how could our portfolio be expected to fare in the event that their correlation spiked to 0.5 over the next month?)
 
 Though it naturally slows down the simulation process in simple cases, say if mean returns or return correlations remain constant, this is intended to be a generic implementation that gives the user significant optionality. Where performance time is critical, an implementation tailored specifically for the task at hand with the precise amount of complexity necessary could be written. Moreover, a low-level language much better suited for such a task, such as C++, would likely be in order.
 
