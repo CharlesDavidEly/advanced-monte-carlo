@@ -48,11 +48,11 @@ In addition to those parameters associated with the underlyings, there are the f
 2. Time unit size = *Δt* (in trading days; e.g., days (1), weeks (5 trading days), months (21 trading days), etc.)
 3. Time units (e.g., 252 if your simulation unit size is days (1) and you want to simulate prices over the course of a year)
 
-While this implementation will accept and properly handle Δt assignments under 1 (e.g., half-days (0.5), quarter-days (0.25), etc.), XXX.
+While this implementation will accept and properly handle *Δt* assignments under 1 (e.g., half-days (0.5), quarter-days (0.25), etc.), it is worth mentioning that simulation results will not be as reliable even if considered just theoretically. For *Δt* >= 1, the impact from overnight price changes is clearly assigned; today's price change implicitly includes last night's overnight price change. For *Δt* < 1, TBD.
 
 # Limitations
 
-As the word "basic" in the name implies, this Monte Carlo specification does not account for everything. Specifically, it does not capture the empirical reality of volatility clustering, as could be done using a GARCH model. Moreover, it does not accurately capture the differentiated behavior between open market and after hours periods, as would a jump diffusion model.
+As the word "basic" in the name implies, this Monte Carlo specification does not account for everything. Specifically, it does not capture the empirical reality of volatility clustering, as could be done using a GARCH model. Moreover, it does not accurately capture the differentiated behavior between open market and after hours periods, as would a jump-diffusion model.
 
 The primary impact of these limitations is that for underlyings whose precise movements (and especially volatilities) in the very near term are of critical importance to identify, this specification will leave much to be desired. An easy example of such a scenario would be an underlying we're looking at because we're considering purchasing a call option on it that expires in a week.
 
