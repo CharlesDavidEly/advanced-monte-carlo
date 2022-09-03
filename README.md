@@ -8,7 +8,7 @@ The above formula is the core of the stock price Monte Carlo simulation concept,
 
 ## Drift
 
-An underlying's drift is simply a product of its μ (average simple return) and σ (simple return standard deviation) as calculated over some specified ex-post sample period, interacting as depicted in the formula above and then being scaled by Δt. Notably, the core of the drift term (that is, the part in the parentheses that's ultimately scaled by Δt) is also equivalent to the same ex-post sample's log return, so it could just be defined as that directly without any need for μ or σ. Alternatively, μ and σ (or an expected average log return as previously explained) could be specified explictly to plug a particular ex-ante market view into the model.
+An underlying's drift is simply a product of its μ (average simple return) and σ (simple return standard deviation) as calculated over some specified ex-post sample period, interacting as depicted in the formula above and then being scaled by Δt. Notably, the core of the drift term (that is, the part in the parentheses that's ultimately scaled by Δt) is also equivalent to the same ex-post sample's average log return, so it could just be defined as that directly without any need for μ or σ. Alternatively, μ and σ (or an expected average log return as previously explained) could be specified explictly to plug a particular ex-ante market view into the model.
 
 ## Random Walk
 
