@@ -48,7 +48,11 @@ In addition to those parameters associated with the underlyings, there are the f
 2. Time unit size = *Δt* (in trading days; e.g., days (1), weeks (5 trading days), months (21 trading days), etc.)
 3. Time units (e.g., 252 if your simulation unit size is days (1) and you want to simulate prices over the course of a year)
 
-While this implementation will accept and properly handle *Δt* assignments under 1 (e.g., half-days (0.5), quarter-days (0.25), etc.), it is worth mentioning that simulation results will not be as reliable even if considered just theoretically. For *Δt* >= 1, the impact from overnight price jumps is clearly assigned; each day's price change implicitly includes the night before's overnight price jump. For *Δt* < 1 (say *Δt* = 0.5 specifically), each half-day is assigned the impact a half-overnight price jump. This undesired smoothing effect is clearly not modeling the real price behavior of the stock market as well.
+While this implementation will accept and properly handle *Δt* assignments under 1 (e.g., half-days (0.5), quarter-days (0.25), etc.), it is worth mentioning that simulation results will not be as reliable even if considered just theoretically.
+
+For *Δt* = 1, the impact from overnight price jumps is clearly assigned; each day's price change implicitly includes the night before's overnight price jump. For *Δt* > 1 (say *Δt* = 2 specifically), this too is handled satisfactorily; each jump includes day 0->1's overnight jump, day 1's session change, day 1->2's overnight jump, and day 2's session change. All price change components are included to handle to slightly less smooth simulation in 2-day increments.
+
+For *Δt* < 1 however (say *Δt* = 0.5 specifically), each half-day is assigned the impact of a half-overnight price jump, which is clearly nonsensical. If working with half-days it ought to be that odd simulation steps account for the preluding overnight price jump and the 1st half of the day's trading session, whereas even simulation steps account only for the 2nd half of the day's trading session. However, doing this would involve simulation steps no longer being handled identically, which violates the basic premise of our specified model.
 
 # Limitations
 
