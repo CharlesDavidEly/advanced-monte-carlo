@@ -4,7 +4,7 @@ This project is intended to showcase a basic Monte Carlo simulation implementati
 
 ![Screenshot](MonteCarloEqn.jpg)
 
-The above formula is the core of the stock price Monte Carlo simulation concept, utilizing geometric Brownian under the risk-neutral measure. A simulated stock price can be conceptualized as the previous day's stock price multiplied by e to the sum of 1) some drift (scaled by Δt), and 2) a random walk (scaled by sqrt(Δt)).
+The above formula is the core of the stock price Monte Carlo simulation concept, utilizing geometric Brownian under the risk-neutral measure. A simulated stock price can be conceptualized as the previous day's stock price multiplied by e to the sum of 1) some drift (scaled by Δt), and 2) a random walk (scaled by √(Δt)).
 
 An underlying's drift is simply a product of its mu (average simple return) and sigma (simple return standard deviation) as calculated over some previous specified sample period. Notably the drift term is also equivalent to the calculation of a sample log return, so it could be empirically defined as just the log return directly without any need for mu or sigma. Alternatively, mu and sigma (or drift directly as a log return) could be specified explictly to plug a particular market view into the model.
 
