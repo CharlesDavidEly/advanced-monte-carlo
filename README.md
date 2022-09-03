@@ -20,9 +20,9 @@ Importantly, this random term ε is ultimately the center of all attention. It i
 
 Specifically, there is at each step of the simulation with respect to the random term, ε:
 
-1) The application of skew and kurtosis (ex-post sample or ex-ante desired) to each stock's simulated log return
+1) The application of skew and kurtosis (ex-post sample or ex-ante desired) to each stock's simulated ε
 2) The determination of necessary correlations by taking desired correlations (ex-post sample or ex-ante desired) and accounting for interactive effects (they must be made stronger due to the correlation muting effect caused by applying skew and kurtosis in step 1))
-3) The application of necessary correlations to the log returns resulting from step 1)
+3) The application of necessary correlations to the ε's resulting from step 1)
 
 # Parameters
 
