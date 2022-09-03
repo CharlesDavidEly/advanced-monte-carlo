@@ -48,7 +48,7 @@ In addition to those parameters associated with the underlyings, there are the f
 2. Time unit size = Δt (in trading days; e.g., days (1), weeks (5 trading days), months (21 trading days), etc.)
 3. Time units (e.g., 252 if your simulation unit size is days (1) and you want to simulate prices over the course of a year)
 
-Fasdfadsfasdf
+While this implementation will accept and properly handle Δt assignments under 1 (e.g., half-days (0.5), quarter-days (0.25), etc.), XXX.
 
 # Limitations
 
