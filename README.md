@@ -61,4 +61,4 @@ Though relatively advanced, this Monte Carlo specification does not account for 
 
 The primary impact of these limitations is that for underlyings whose precise movements (and especially volatilities) in the very near term are of critical importance to identify, this specification will leave much to be desired. An easy example of such a scenario would be an underlying we're looking at because we're considering purchasing a call option on it that expires in a week.
 
-For most use cases however, where the duration of going concern for a portfolio of underlyings is over the medium to long term, this specification should prove quite appropriate and satisfactory. Although basic, it accounts for all of the low-hanging fruit, so to speak.
+For most use cases however, where the duration of going concern for a portfolio of underlyings is over the medium to long term, this specification should prove quite appropriate and satisfactory. Although not from state of the art, it gets us to a pretty good model and covers all of the low-hanging fruit, so to speak.
