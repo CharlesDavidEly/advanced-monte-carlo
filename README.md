@@ -20,13 +20,9 @@ Importantly, this random term ε is ultimately the center of all attention. It i
 
 Specifically, there is at each step of the simulation with respect to the random term, ε:
 
-1) The application of skew and kurtosis (ex-post sample or ex-ante desired) to each stock's simulated ε
-2) The determination of necessary correlations by taking desired correlations (ex-post sample or ex-ante desired) and accounting for interactive effects (they must be made stronger to offset the correlation muting effect caused by applying skew and kurtosis in step 1)
-3) The application of necessary correlations to the ε's resulting from step 1
-
-1. Test
-2. Test
-3. Test
+1. The application of skew and kurtosis (ex-post sample or ex-ante desired) to each stock's simulated ε
+2. The determination of necessary correlations by taking desired correlations (ex-post sample or ex-ante desired) and accounting for interactive effects (they must be made stronger to offset the correlation muting effect caused by applying skew and kurtosis in step 1)
+3. The application of necessary correlations to the ε's resulting from step 1
 
 # Parameters
 
@@ -34,9 +30,9 @@ Specifically, there is at each step of the simulation with respect to the random
 
 In addition to the most basic and fundamental parameters for this method (mean and variance), this Monte Carlo simulation implementation allows for the following inputs:
 
-1) Skew
-2) Kurtosis
-3) Correlation
+1. Skew
+2. Kurtosis
+3. Correlation
 
 It also gives the option for all parameters to change over time, linearly from A to B or however else this is to be defined. This allows for the very useful assessment of nuanced market views, (e.g. that a stock's returns variance will increase over the next year, or that two stocks' returns correlation will decrease).
 
@@ -48,9 +44,9 @@ Where performance time is critical, an implementation tailored specifically for 
 
 In addition to those parameters associated with the underlyings, there are the following inputs at the simulation level:
 
-1) Simulation number
-2) Time unit size = Δt (in trading days; e.g., days (1), weeks (5 trading days), months (21 trading days), etc.)
-3) Time units (e.g., 252 if your simulation unit size is days (1) and you want to simulate prices over the course of a year)
+1. Simulation number
+2. Time unit size = Δt (in trading days; e.g., days (1), weeks (5 trading days), months (21 trading days), etc.)
+3. Time units (e.g., 252 if your simulation unit size is days (1) and you want to simulate prices over the course of a year)
 
 Fasdfadsfasdf
 
