@@ -1,6 +1,8 @@
 # Advanced Monte Carlo
 
-This project is intended to showcase a relatively advanced Monte Carlo simulation implementation in VBA. It enables one to simulate underlying price movements for multiple stocks, accounting for a few basic complexities (skew, kurtosis, correlation, and nonstationarity) beyond a plain vanilla implementation to achieve more realistic and useful results. It is based upon this paper (https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2665147), using the methods described therein and adding in nonstationarity optionality on top of that.
+This project showcases a relatively advanced Monte Carlo simulation implementation in VBA. It simulates underlying price movements for multiple stocks, accounting for a few basic complexities (nonnormality, correlation, and nonstationarity) beyond a plain vanilla implementation to achieve more realistic and useful results.
+
+It is based upon this paper (https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2665147), using the methods described therein and adding in nonstationarity optionality on top of that.
 
 ![Screenshot](MonteCarloEqn.jpg)
 
