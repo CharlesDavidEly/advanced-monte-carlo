@@ -59,7 +59,7 @@ For *Δt* < 1 however (say *Δt* = 0.5 specifically), each half-day is assigned 
 
 # Limitations
 
-Though relatively advanced, this Monte Carlo implementation does not account for everything. Specifically, it does not capture the empirical reality of volatility clustering, as could be done using a GARCH model. Nor does it does not accurately capture the differentiated behavior between open-market and after-hours periods, as would a jump-diffusion model.
+Though relatively advanced, this Monte Carlo implementation does not account for everything. Specifically, it does not capture the empirical reality of volatility clustering, as could be done using a GARCH model. Nor does it accurately capture the differentiated behavior between open-market and after-hours periods, as would a jump-diffusion model.
 
 The primary impact of these limitations is that for underlyings whose precise movements (and especially volatilities) in the very near term are of critical importance to identify, this specification will leave much to be desired. An easy example of such a scenario would be an underlying we're looking at because we're considering purchasing a call option on it that expires in a week.
 
