@@ -10,7 +10,7 @@ The above formula is the core of the stock price Monte Carlo simulation concept,
 
 ## Drift
 
-An underlying's drift is simply a product of its *μ* (average simple return) and *σ* (simple return standard deviation) as calculated over some specified ex-post sample period, interacting as depicted in the formula above and then being scaled by *Δt*. Notably, the core of the drift term (that is, the part in the parentheses that's ultimately scaled by *Δt*) is also equivalent to the same ex-post sample's average log return, so it could just be defined as that directly without any need for *μ* or *σ*. Alternatively, *μ* and *σ* (or an expected average log return as previously explained) could be specified explictly to plug a particular ex-ante market view into the model.
+An underlying's drift is simply a product of its *μ* (average simple return) and *σ* (simple return standard deviation) as calculated over some specified ex-post sample period, interacting as depicted in the formula above and then being scaled by *Δt*. Notably, the core of the drift term (that is, the part in the parentheses that's ultimately scaled by *Δt*) is also equivalent to the same ex-post sample's average log return, so it could just be defined as that directly without any need for *μ* or *σ*. Alternatively, *μ* and *σ* (or an expected average log return as previously explained) could be specified explicitly to plug a particular ex-ante market view into the model.
 
 ## Random Walk
 
@@ -23,7 +23,7 @@ Importantly, this random term *ε* is ultimately the center of all attention. It
 Specifically, there is at each step of the simulation with respect to the random term, *ε*:
 
 1. The application of skew and kurtosis (ex-post sample or ex-ante desired) to each stock's simulated *ε* (achieving an *ε'* set)
-2. The determination of necessary correlations by taking desired correlations (ex-post sample or ex-ante desired) and accounting for interactive effects (they must be made stronger to offset the correlation muting effect caused by applying skew and kurtosis in step 1)
+2. The determination of necessary correlations by taking desired correlations (ex-post sample or ex-ante desired) and accounting for interactive effects (they must be made stronger to offset the correlation muting effect of imparting skew and kurtosis in step 1)
 3. The application of necessary correlations to the *ε'* set resulting from step 1 (achieving our final desired *ε''* set)
 
 # Parameters
@@ -55,7 +55,7 @@ While this implementation will accept and properly handle *Δt* assignments unde
 
 For *Δt* = 1, the impact from overnight price jumps is clearly assigned; each day's price change implicitly includes the night before's overnight price jump. For *Δt* > 1 (say *Δt* = 2 specifically), this too is handled satisfactorily; each jump includes day 0->1's overnight jump, day 1's session change, day 1->2's overnight jump, and day 2's session change. All price change components are included to encompass a slightly less smooth simulation in 2-day increments, with each simulation step being handled identically.
 
-For *Δt* < 1 however (say *Δt* = 0.5 specifically), each half-day is assigned the impact of a half-overnight price jump, which is clearly nonsensical. If working with half-days it ought to be that odd simulation steps account for the preluding overnight price jump and the 1st half of the day's trading session, whereas even simulation steps account only for the 2nd half of the day's trading session. However, doing this would involve simulation steps no longer being handled identically, which violates the basic premise of our specified model.
+For *Δt* < 1 however, the theoretical validity of things comes apart. Using *Δt* = 0.5 as an example, each half-day would be assigned the impact of a half-overnight price jump, which is clearly nonsensical. If working with half-days it ought to be that odd simulation steps account for the preluding overnight price jump and the 1st half of the day's trading session, whereas even simulation steps account only for the 2nd half of the day's trading session. However, doing this would involve simulation steps no longer being handled identically, which violates the basic premise of our specified model.
 
 # Limitations
 
